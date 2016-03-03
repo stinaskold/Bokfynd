@@ -8,6 +8,7 @@ header {
   top: 0;
   width: 100%;
   height: 80px;
+  z-index: 1000;
 }
 
 main {
@@ -15,54 +16,150 @@ main {
 }
 
 h1 {
+  text-align: center;
   margin: 0 auto;
-  margin-top: 40%;
-  width:70%;
+  padding-top: 70px;
+  width:80%;
   font-size: 2.6em;
+  line-height: 1.4em;
+  letter-spacing: 0.03em;
+  color: #fff;
 }
 
 h2 {
   text-align: center;
+  padding-top: 70px;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 2em;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .logo {
-  width: 130px;
+  width: 35%;
   position: absolute;
-  top: 20%;
-  left: 2%;
+  top: 30px;
+  left: 10px;
 }
 
 .saved-books {
   position: absolute;
-  width: 150px;
-  top: 30%;
+  width: 25%;
+  top: 15px;
   left: 45%;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: #ddedeb;
+  border-radius: 10px;
   border: none;
-  padding: 5px 0;
+  padding: 2px 10px;
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  line-height: -5%;
+  text-align: left;
 }
 
 .saved-books span {
   background-color: #000;
-  color: #fff;
+  color: #ddedeb;
   border-radius: 50%;
-  padding: 2% 5%;
-  margin-left: 3%;
+  padding: 2% 10%;
+  margin-left: 0%;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.call-to-action {
+  background: url("../img/books_bg.jpg") no-repeat;
+  background-position: bottom right;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 100px;
 }
 
 .search {
-  margin-top: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
   text-align: center;
+  position: relative;
+  width: 320px;
+  height: 45px;
+  font-family: 'Lato', sans-serif;
 }
 
 .search input {
-  width: 70%;
+  width: 300px;
+  height: 45px;
+  background-color: rgba(0,0,0,0);
+  border-radius: 10px;
+  border: 2px solid #ffff00;
+  color: #f2f2f2;
+  padding-left: 10px;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.search button {
+  height: 45px;
+  position: absolute;
+  left: 250px;
+  padding: 0 10px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  background-color: #ffff00;
+  font-weight: bold;
+  font-size: 1.6em;
+  letter-spacing: 0.05em;
+}
+
+.about {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about span {
+  font-size: 1.5em;
+  padding-right: 0.2em;
+}
+
+.popular-section {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+
+.popular {
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 200px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+button.compare, button.save {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 5px 10px;
+
+}
+
+button.compare {
+  background-color: #00a99d;
+  border: none;
+  color: #fff;
+}
+
+button.save {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 2px solid #00a99d;
+  color: #00a99d;
+  font-weight: 700;
 }
