@@ -8,27 +8,262 @@
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/carousel_swipe.js"></script>
   </head>
   <body>
 
     <header>
-      <img src="img/bokfynd_logo.svg" class="logo">
-      <button class="saved-books">Sparade böcker <span>3</span></button>
-      <ul>
-        <li>Kategorier</li>
-        <li>Hjälp</li>
-        <li>Om bokfynd</li>
-      </ul>
+
+      <div class="navbar navbar-default">
+        <div class="page-header">
+          <img src="img/bokfynd_logo.svg" class="logo">
+          <button class="saved-books">Sparade böcker <span>3</span></button>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Om Bokfynd</a></li>
+          <li><a href="#">Hjälp</a></li>
+          <li>
+          <div class="dropdown">
+             <a href="#" data-toggle="dropdown" class="dropdown-toggle" id="categories">Kategorier <b class="caret"></b></a>
+             <ul class="dropdown-menu multi-column columns-3">
+
+               <div class="row">
+                 <div class="col-sm-4">
+                  <ul class="multi-column-dropdown" id ="first-list">
+               <li><a href="#">Aforismer och citat</a></li>
+  <li><a href="#">Astrologi och esoterika</a></li>
+  <li><a href="#">Barn och ungdom facklitteratur</a></li>
+  <li><a href="#">Barn och ungdom skönlitteratur</a></li>
+  <li><a href="#">Bok och skrift</a></li>
+  <li><a href="#">Datalitteratur</a></li>
+  <li><a href="#">Deckare och thrillers</a></li>
+  <li><a href="#">Dramatik</a></li>
+  <li><a href="#">Ekonomi och företag</a></li>
+  <li><a href="#">Fantasy och Science Fiction</a></li>
+  <li><a href="#">Film och fotografi</a></li>
+  <li><a href="#">Filosofi och idéhistoria</a></li>
+  <li><a href="#">Hem och Hushåll</a></li>
+  <li><a href="#">Historia och arkeologi</a></li>
+  <li><a href="#">Hobby och hantverksindustri</a></li>
+  <li><a href="#">Humor och kåserier</a></li>
+</ul>
+</div>
+     <div class="col-sm-4">
+  <ul class="multi-column-dropdown">
+
+  <li><a href="#">Husdjur</a></li>
+  <li><a href="#">Hälsa</a></li>
+  <li><a href="#">Jakt och fiske</a></li>
+  <li><a href="#">Jord och skog</a></li>
+  <li><a href="#">Juridik</a></li>
+  <li><a href="#">Kartor</a></li>
+  <li><a href="#">Kassettböcker</a></li>
+  <li><a href="#">Konst</a></li>
+  <li><a href="#">Kulturhistoria</a></li>
+  <li><a href="#">Litteraturvetenskap</a></li>
+  <li><a href="#">Lyrik</a></li>
+  <li><a href="#">Mat och dryck</a></li>
+  <li><a href="#">Matematik och statistik</a></li>
+  <li><a href="#">Media och kommunikation</a></li>
+  <li><a href="#">Memoarer och biografier</a></li>
+  <li><a href="#">Multimedia</a></li>
+</ul>
+</div>
+     <div class="col-sm-4">
+  <ul class="multi-column-dropdown">
+
+  <li><a href="#">Musik och teater</a></li>
+  <li><a href="#">Naturvetenskap</a></li>
+  <li><a href="#">Pedagogik</a></li>
+  <li><a href="#">Psykologi</a></li>
+  <li><a href="#">Religion</a></li>
+  <li><a href="#">Resehandböcker och geografi</a></li>
+  <li><a href="#">Samhälle och politik</a></li>
+  <li><a href="#">Serier</a></li>
+  <li><a href="#">Skönlitteratur på svenska</a></li>
+  <li><a href="#">Skönlitteratur övriga språk</a></li>
+  <li><a href="#">Släktforskning</a></li>
+  <li><a href="#">Sport och fritid</a></li>
+  <li><a href="#">Språk och ordböcker</a></li>
+  <li><a href="#">Teknik</a></li>
+  <li><a href="#">Trädgård</a></li>
+  <li><a href="#">Uppslagsverk</a></li>
+</ul>
+</div>
+</div>
+</div>
+             </ul>
+          </div>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
     </header>
 
     <main>
       <div class="call-to-action">
         <h1>Hitta det lägsta priset på böcker!</h1>
         <div class="search">
-        <input type="text" value="Boktitel, författare, IBSN...">
+        <input type="text" placeholder="Boktitel, författare, IBSN...">
         <button>Sök</button>
         </div>
       </div>
+
+
+      <div class="popular-section">
+      <div class="container">
+        <h2>Populära böcker</h2>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <div class="item active">
+      <div class="popular">
+          <img src="img/alskade-terrorist.jpg">
+        <div class="popular-text">
+          <h3>Älskade terrorist</h3>
+          <h4>Anna Sundberg, Jesper Huor</h4>
+          <button class="compare">Jämför pris</button>
+          <button class="save">Spara</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="popular">
+          <img src="img/bli-som-folk.jpg">
+        <div class="popular-text">
+          <h3>Bli som folk</h3>
+          <h4>Stina Stoor</h4>
+          <button class="compare">Jämför pris</button>
+          <button class="save">Spara</button>
+      </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="popular">
+          <img src="img/jag-vet-allt.jpg">
+        <div class="popular-text">
+          <h3>Jag vet allt det här</h3>
+          <h4>Annika Paldanius</h4>
+          <button class="compare">Jämför pris</button>
+          <button class="save">Spara</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="popular">
+          <img src="img/natt-for-gott.jpg">
+        <div class="popular-text">
+          <h3>Natt för gott</h3>
+          <h4>Jenny Erpenbeck</h4>
+          <button class="compare">Jämför pris</button>
+          <button class="save">Spara</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="popular">
+          <img src="img/nattbuss-198.jpg">
+          <div class="popular-text">
+            <h3>Nattbuss 198</h3>
+            <h4>Niklas Krog</h4>
+            <button class="compare">Jämför pris</button>
+            <button class="save">Spara</button>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+    <div class="popular-desktop">
+
+        <div class="popular">
+            <img src="img/alskade-terrorist.jpg">
+          <div class="popular-text">
+            <h3>Älskade terrorist</h3>
+            <h4>Anna Sundberg, Jesper Huor</h4>
+            <button class="compare">Jämför pris</button>
+            <button class="save">Spara</button>
+          </div>
+        </div>
+
+        <div class="popular">
+            <img src="img/bli-som-folk.jpg">
+          <div class="popular-text">
+            <h3>Bli som folk</h3>
+            <h4>Stina Stoor</h4>
+            <button class="compare">Jämför pris</button>
+            <button class="save">Spara</button>
+        </div>
+        </div>
+
+        <div class="popular">
+            <img src="img/jag-vet-allt.jpg">
+          <div class="popular-text">
+            <h3>Jag vet allt det här</h3>
+            <h4>Annika Paldanius</h4>
+            <button class="compare">Jämför pris</button>
+            <button class="save">Spara</button>
+          </div>
+        </div>
+
+        <div class="popular">
+            <img src="img/natt-for-gott.jpg">
+          <div class="popular-text">
+            <h3>Natt för gott</h3>
+            <h4>Jenny Erpenbeck</h4>
+            <button class="compare">Jämför pris</button>
+            <button class="save">Spara</button>
+          </div>
+        </div>
+
+        <div class="popular">
+            <img src="img/nattbuss-198.jpg">
+            <div class="popular-text">
+              <h3>Nattbuss 198</h3>
+              <h4>Niklas Krog</h4>
+              <button class="compare">Jämför pris</button>
+              <button class="save">Spara</button>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>
 
       <div class="about">
         <p><span>Bokfynd</span>  är en oberoende tjänst
@@ -38,51 +273,10 @@ böcker. På detta sätt kan du enkelt hitta
 de bästa erbjudandena.</p>
       </div>
 
-      <div class="popular-section">
-        <h2>Populära böcker</h2>
-        <div class="popular">
-          <img src="img/alskade-terrorist.jpg">
-          <h3>Älskade terrorist</h3>
-          <h4>Anna Sundberg</h4>
-          <button class="compare">Jämför pris</button>
-          <button class="save">Spara</button>
-        </div>
-
-        <div class="popular">
-          <img src="img/bli-som-folk.jpg">
-          <h3>Älskade terrorist</h3>
-          <h4>Anna Sundberg</h4>
-          <button class="compare">Jämför pris</button>
-          <button class="save">Spara</button>
-        </div>
-
-        <div class="popular">
-          <img src="img/jag-vet-allt.jpg">
-          <h3>Älskade terrorist</h3>
-          <h4>Anna Sundberg</h4>
-          <button class="compare">Jämför pris</button>
-          <button class="save">Spara</button>
-        </div>
-
-        <div class="popular">
-          <img src="img/natt-for-gott.jpg">
-          <h3>Älskade terrorist</h3>
-          <h4>Anna Sundberg</h4>
-          <button class="compare">Jämför pris</button>
-          <button class="save">Spara</button>
-        </div>
-
-        <div class="popular">
-          <img src="img/nattbuss-198.jpg">
-          <h3>Älskade terrorist</h3>
-          <h4>Anna Sundberg</h4>
-          <button class="compare">Jämför pris</button>
-          <button class="save">Spara</button>
-        </div>
-      </div>
     </main>
 
     <footer>
+    <p>  © Triple Beta AB.  <p>
     </footer>
 
   </body>
