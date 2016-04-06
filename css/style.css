@@ -115,16 +115,17 @@ button.navbar-toggle {
 }
 
   ul.nav {
-  margin-top: 80px;
+  margin-top: 20px;
   margin-left: 0px;
   color: #fff;
   font-family: 'Lato', sans-serif;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 ul.nav li {
-	padding-left: 15px;
-  width: 90%;
+	padding-left: 0px;
+  padding-right: 0px;
 }
 
 ul.nav li a {
@@ -132,21 +133,73 @@ ul.nav li a {
   font-weight: 700;
   font-size: 1.2em;
   margin-bottom: 2px;
-  background-color: #ccc;
+  background-color: none;
 }
 
 ul.nav li a:hover {
   color: #006b61 !important;
+  background-color: none !important;
 }
 
-#categories, #categories:hover, #categories:focus, #categories:active, #categories:toggle {
+.navbar-default .navbar-nav .multi-column-dropdown >li>a, .navbar-default .navbar-nav .multi-column-dropdown {
+ font-size: 1em;
+}
+
+#categories {
+  margin-left: 15px;
+}
+
+#categories, #categories:hover, #categories:focus, #categories:active, #categories:toggle, #categories:visited  {
   text-decoration: none;
   background-color: none;
+}
+
+a:hover.dropdown-toggle {
+  text-decoration: none;
 }
 
 .dropdown-toggle:active, .open .dropdown-toggle {
   background:none !important;
   text-decoration: none;
+}
+
+.multi-column-dropdown {
+	list-style: none;
+  padding: 10px;
+}
+
+.navbar-default .navbar-nav .multi-column-dropdown >li>a, .navbar-default .navbar-nav .multi-column-dropdown {
+ font-size: 1em;
+}
+
+.navbar-default .navbar-nav .multi-column-dropdown >li>a:hover {
+color: #006b61 !important;
+}
+
+.dropdown-menu.columns-3 {
+min-width: 800px;
+}
+.dropdown-menu li a {
+padding: 5px 5px;
+font-weight: 300;
+color: #00a99d !important;
+}
+
+.multi-column-dropdown li a {
+display: block;
+clear: both;
+line-height: 3;
+color: #00a99d !important;
+white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+text-decoration: none;
+color: #00a99d !important;
+}
+
+.dropdown-menu {
+  background-color: #fff;
+  border: none;
 }
 
 .saved-books {
@@ -372,6 +425,9 @@ footer p {
   text-align: center;
 }
 
+
+
+
 @media screen and (min-width: 768px) {
 
 
@@ -403,6 +459,7 @@ footer p {
     margin-right: 210px;
     margin-top: 8px;
     width: auto;
+    padding-bottom: 0px;
   }
 
   ul.nav li {
@@ -421,10 +478,6 @@ footer p {
     margin-left: 15px;
   }
 
-  a:hover.dropdown-toggle {
-    text-decoration: none;
-  }
-
   .dropdown-menu {
     background-color: #fff;
     border: none;
@@ -432,38 +485,15 @@ footer p {
 
   .navbar-default .navbar-nav .multi-column-dropdown >li>a, .navbar-default .navbar-nav .multi-column-dropdown {
    color: #00a99d !important;
-   font-size: 1em;
  }
 
-.navbar-default .navbar-nav .multi-column-dropdown >li>a:hover {
-  color: #006b61 !important;
-}
+ .multi-column-dropdown li a {
+   line-height: 1.428571429;
+ }
 
-.dropdown-menu.columns-3 {
-	min-width: 800px;
-}
-.dropdown-menu li a {
-	padding: 5px 5px;
-	font-weight: 300;
-  color: #00a99d !important;
-}
-
-.multi-column-dropdown {
-	list-style: none;
-  padding: 10px;
-}
-
-.multi-column-dropdown li a {
-	display: block;
-	clear: both;
-	line-height: 1.428571429;
-	color: #00a99d !important;
-	white-space: normal;
-}
-.multi-column-dropdown li a:hover {
-	text-decoration: none;
-	color: #00a99d !important;
-}
+ #categories {
+   margin-left: 0px;
+ }
 
   .saved-books {
     left:auto;
